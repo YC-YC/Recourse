@@ -24,6 +24,7 @@
         </activity>
          <activity android:name="com.example.resources.ResourceActivity"></activity>
          <activity android:name="com.example.resources.AnimationActivity"></activity>
+         <activity android:name="com.example.resources.ReflectActivity"></activity>
          
         <activity android:name="com.example.resources.drawable.ButtonState"></activity>
         <activity android:name="com.example.resources.drawable.Clip"></activity>

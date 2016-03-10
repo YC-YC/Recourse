@@ -15,6 +15,11 @@
         android:layout_height="wrap_content"
         android:onClick="onClick_Animtation"
         android:text="动画" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick_Reflect"
+        android:text="图片倒影" />
 
 
 </LinearLayout>

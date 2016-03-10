@@ -21,7 +21,9 @@ public class MainActivity extends Activity {
 	public void onClick_Animtation(View view) {
 		Intent intent = new Intent(this, AnimationActivity.class);
 		startActivity(intent);
-
 	}
-
+	public void onClick_Reflect(View view) {
+		Intent intent = new Intent(this, ReflectActivity.class);
+		startActivity(intent);
+	}
 }

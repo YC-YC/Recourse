@@ -37,35 +37,37 @@ public final class R {
         public static final int button=0x7f020003;
         public static final int clip=0x7f020004;
         public static final int cross_fade=0x7f020005;
-        public static final int focused=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
-        public static final int inset=0x7f020008;
-        public static final int lamp=0x7f020009;
-        public static final int lamp_off=0x7f02000a;
-        public static final int lamp_on=0x7f02000b;
-        public static final int layer=0x7f02000c;
-        public static final int loading=0x7f02000d;
-        public static final int normal=0x7f02000e;
-        public static final int pic_1=0x7f02000f;
-        public static final int pic_10=0x7f020010;
-        public static final int pic_11=0x7f020011;
-        public static final int pic_12=0x7f020012;
-        public static final int pic_2=0x7f020013;
-        public static final int pic_3=0x7f020014;
-        public static final int pic_4=0x7f020015;
-        public static final int pic_5=0x7f020016;
-        public static final int pic_6=0x7f020017;
-        public static final int pic_7=0x7f020018;
-        public static final int pic_8=0x7f020019;
-        public static final int pic_9=0x7f02001a;
-        public static final int pressed=0x7f02001b;
-        public static final int progress=0x7f02001c;
-        public static final int shape=0x7f02001d;
+        public static final int dvr=0x7f020006;
+        public static final int focused=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int inset=0x7f020009;
+        public static final int lamp=0x7f02000a;
+        public static final int lamp_off=0x7f02000b;
+        public static final int lamp_on=0x7f02000c;
+        public static final int layer=0x7f02000d;
+        public static final int loading=0x7f02000e;
+        public static final int normal=0x7f02000f;
+        public static final int pic_1=0x7f020010;
+        public static final int pic_10=0x7f020011;
+        public static final int pic_11=0x7f020012;
+        public static final int pic_12=0x7f020013;
+        public static final int pic_2=0x7f020014;
+        public static final int pic_3=0x7f020015;
+        public static final int pic_4=0x7f020016;
+        public static final int pic_5=0x7f020017;
+        public static final int pic_6=0x7f020018;
+        public static final int pic_7=0x7f020019;
+        public static final int pic_8=0x7f02001a;
+        public static final int pic_9=0x7f02001b;
+        public static final int pressed=0x7f02001c;
+        public static final int progress=0x7f02001d;
+        public static final int shape=0x7f02001e;
     }
     public static final class id {
-        public static final int action_settings=0x7f090004;
+        public static final int action_settings=0x7f090005;
         public static final int image=0x7f090002;
         public static final int imageview_lamp=0x7f090003;
+        public static final int img_dvr=0x7f090004;
         public static final int img_frame=0x7f090000;
         public static final int img_tween=0x7f090001;
     }
@@ -78,8 +80,9 @@ public final class R {
         public static final int inset=0x7f030005;
         public static final int layer=0x7f030006;
         public static final int level=0x7f030007;
-        public static final int resource_main=0x7f030008;
-        public static final int shape=0x7f030009;
+        public static final int reflect_main=0x7f030008;
+        public static final int resource_main=0x7f030009;
+        public static final int shape=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f080000;
