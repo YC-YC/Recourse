@@ -1,4 +1,8 @@
-package com.example.resources;
+package com.example.resources.drawable;
+
+import com.example.resources.R;
+import com.example.resources.R.id;
+import com.example.resources.R.layout;
 
 import android.app.Activity;
 import android.graphics.drawable.ClipDrawable;

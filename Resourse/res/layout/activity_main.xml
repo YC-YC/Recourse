@@ -7,43 +7,14 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick_Layer"
-        android:text="Layer" />
+        android:onClick="onClick_Drawable"
+        android:text="资源配置" />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick_ButtonState"
-        android:text="ButtonState" />
+        android:onClick="onClick_Animtation"
+        android:text="动画" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick_Level"
-        android:text="Level等级" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick_CrossFade"
-        android:text="CrossFade渐变" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick_Inset"
-        android:text="Inset边框" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick_Clip"
-        android:text="Clip剪切(适合做只有显示有进度条)" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick_Shape"
-        android:text="Shape边距" />
 
 </LinearLayout>
