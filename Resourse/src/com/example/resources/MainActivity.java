@@ -1,5 +1,6 @@
 package com.example.resources;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,5 +26,17 @@ public class MainActivity extends Activity {
 	public void onClick_Reflect(View view) {
 		Intent intent = new Intent(this, ReflectActivity.class);
 		startActivity(intent);
+	}
+	
+	public void onClick_Main(View view)
+	{
+		switch (view.getId()) {
+		case R.id.btn_contentprovider:
+			startActivity(new Intent(this, ContentResolveActivity.class));
+			break;
+
+		default:
+			break;
+		}
 	}
 }
