@@ -64,26 +64,27 @@ public final class R {
         public static final int shape=0x7f02001e;
     }
     public static final class id {
-        public static final int action_settings=0x7f090013;
+        public static final int action_settings=0x7f090014;
         public static final int age=0x7f090007;
-        public static final int btn_client1_send=0x7f09000e;
-        public static final int btn_client2_send=0x7f090012;
+        public static final int btn_client1_send=0x7f09000f;
+        public static final int btn_client2_send=0x7f090013;
         public static final int btn_contentprovider=0x7f090000;
-        public static final int btn_insert=0x7f090009;
-        public static final int et_client1=0x7f09000d;
-        public static final int et_client2=0x7f090011;
+        public static final int btn_insert=0x7f09000a;
+        public static final int button1=0x7f090008;
+        public static final int et_client1=0x7f09000e;
+        public static final int et_client2=0x7f090012;
         public static final int id=0x7f090005;
         public static final int image=0x7f090003;
         public static final int imageview_lamp=0x7f090004;
-        public static final int img_dvr=0x7f090008;
+        public static final int img_dvr=0x7f090009;
         public static final int img_frame=0x7f090001;
         public static final int img_tween=0x7f090002;
-        public static final int listView_content=0x7f09000a;
+        public static final int listView_content=0x7f09000b;
         public static final int name=0x7f090006;
-        public static final int scroll2_content=0x7f09000f;
-        public static final int scroll_content=0x7f09000b;
-        public static final int tv_client1_content=0x7f09000c;
-        public static final int tv_client2_content=0x7f090010;
+        public static final int scroll2_content=0x7f090010;
+        public static final int scroll_content=0x7f09000c;
+        public static final int tv_client1_content=0x7f09000d;
+        public static final int tv_client2_content=0x7f090011;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -95,12 +96,13 @@ public final class R {
         public static final int item=0x7f030006;
         public static final int layer=0x7f030007;
         public static final int level=0x7f030008;
-        public static final int reflect_main=0x7f030009;
-        public static final int resolver_main=0x7f03000a;
-        public static final int resource_main=0x7f03000b;
-        public static final int shape=0x7f03000c;
-        public static final int socket_client1=0x7f03000d;
-        public static final int socket_client2=0x7f03000e;
+        public static final int popupwin=0x7f030009;
+        public static final int reflect_main=0x7f03000a;
+        public static final int resolver_main=0x7f03000b;
+        public static final int resource_main=0x7f03000c;
+        public static final int shape=0x7f03000d;
+        public static final int socket_client1=0x7f03000e;
+        public static final int socket_client2=0x7f03000f;
     }
     public static final class menu {
         public static final int main=0x7f080000;
