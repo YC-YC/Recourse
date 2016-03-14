@@ -1,6 +1,8 @@
 package com.example.resources;
 
 
+import com.example.resources.popupwin.PopupWindowActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -34,7 +36,9 @@ public class MainActivity extends Activity {
 		case R.id.btn_contentprovider:
 			startActivity(new Intent(this, ContentResolveActivity.class));
 			break;
-
+		case R.id.btn_popupwind:
+			startActivity(new Intent(this, PopupWindowActivity.class));
+			break;
 		default:
 			break;
 		}

@@ -32,7 +32,11 @@
          <activity android:name="com.example.resources.AnimationActivity"></activity>
          <activity android:name="com.example.resources.ReflectActivity"></activity>
          <activity android:name="com.example.resources.ContentResolveActivity"></activity>
-        <activity android:name="com.example.resources.drawable.ButtonState"></activity>
+         <activity android:name="com.example.resources.popupwin.PopupWindowActivity"></activity>
+       
+         
+         
+         <activity android:name="com.example.resources.drawable.ButtonState"></activity>
         <activity android:name="com.example.resources.drawable.Clip"></activity>
         <activity android:name="com.example.resources.drawable.CrossFade"></activity>
         <activity android:name="com.example.resources.drawable.Inset"></activity>
