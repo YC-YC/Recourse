@@ -98,6 +98,8 @@
         </activity>
         <activity android:name="com.example.resources.view.CustomActivity3" >
         </activity>
+         <activity android:name="com.example.resources.view.CustomActivity4" >
+        </activity>
 
         <!-- 自定义ContentProvider -->
         <provider

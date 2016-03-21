@@ -19,6 +19,35 @@ public final class R {
         public static final int translate=0x7f040007;
     }
     public static final class attr {
+        /**  string,color,demension,integer,enum,reference,float,boolean,fraction,flag 
+ 在这里添加可以在xml中按Alt+/出提示 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int titleText=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int titleTextColor=0x7f010001;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int titleTextSize=0x7f010002;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -65,33 +94,34 @@ public final class R {
         public static final int shape=0x7f02001f;
     }
     public static final class id {
-        public static final int action_settings=0x7f09001a;
-        public static final int age=0x7f09000c;
-        public static final int btn_client1_send=0x7f090015;
-        public static final int btn_client2_send=0x7f090019;
+        public static final int action_settings=0x7f09001b;
+        public static final int age=0x7f09000d;
+        public static final int btn_client1_send=0x7f090016;
+        public static final int btn_client2_send=0x7f09001a;
         public static final int btn_contentprovider=0x7f090000;
-        public static final int btn_customview1=0x7f090003;
-        public static final int btn_customview2=0x7f090004;
-        public static final int btn_customview3=0x7f090005;
+        public static final int btn_customview=0x7f090006;
+        public static final int btn_customviewgroup1=0x7f090003;
+        public static final int btn_customviewgroup2=0x7f090004;
+        public static final int btn_customviewgroup3=0x7f090005;
         public static final int btn_drawpic=0x7f090002;
-        public static final int btn_insert=0x7f090010;
-        public static final int btn_popup=0x7f09000d;
+        public static final int btn_insert=0x7f090011;
+        public static final int btn_popup=0x7f09000e;
         public static final int btn_popupwind=0x7f090001;
-        public static final int btn_showpopupwin=0x7f09000e;
-        public static final int et_client1=0x7f090014;
-        public static final int et_client2=0x7f090018;
-        public static final int id=0x7f09000a;
-        public static final int image=0x7f090008;
-        public static final int imageview_lamp=0x7f090009;
-        public static final int img_dvr=0x7f09000f;
-        public static final int img_frame=0x7f090006;
-        public static final int img_tween=0x7f090007;
-        public static final int listView_content=0x7f090011;
-        public static final int name=0x7f09000b;
-        public static final int scroll2_content=0x7f090016;
-        public static final int scroll_content=0x7f090012;
-        public static final int tv_client1_content=0x7f090013;
-        public static final int tv_client2_content=0x7f090017;
+        public static final int btn_showpopupwin=0x7f09000f;
+        public static final int et_client1=0x7f090015;
+        public static final int et_client2=0x7f090019;
+        public static final int id=0x7f09000b;
+        public static final int image=0x7f090009;
+        public static final int imageview_lamp=0x7f09000a;
+        public static final int img_dvr=0x7f090010;
+        public static final int img_frame=0x7f090007;
+        public static final int img_tween=0x7f090008;
+        public static final int listView_content=0x7f090012;
+        public static final int name=0x7f09000c;
+        public static final int scroll2_content=0x7f090017;
+        public static final int scroll_content=0x7f090013;
+        public static final int tv_client1_content=0x7f090014;
+        public static final int tv_client2_content=0x7f090018;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -106,14 +136,15 @@ public final class R {
         public static final int main_custom1=0x7f030009;
         public static final int main_custom2=0x7f03000a;
         public static final int main_custom3=0x7f03000b;
-        public static final int pop_win=0x7f03000c;
-        public static final int popupwin=0x7f03000d;
-        public static final int reflect_main=0x7f03000e;
-        public static final int resolver_main=0x7f03000f;
-        public static final int resource_main=0x7f030010;
-        public static final int shape=0x7f030011;
-        public static final int socket_client1=0x7f030012;
-        public static final int socket_client2=0x7f030013;
+        public static final int main_customview=0x7f03000c;
+        public static final int pop_win=0x7f03000d;
+        public static final int popupwin=0x7f03000e;
+        public static final int reflect_main=0x7f03000f;
+        public static final int resolver_main=0x7f030010;
+        public static final int resource_main=0x7f030011;
+        public static final int shape=0x7f030012;
+        public static final int socket_client1=0x7f030013;
+        public static final int socket_client2=0x7f030014;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -158,4 +189,72 @@ public final class R {
          */
         public static final int ThemeActivity=0x7f070002;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a CustomTitleView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CustomTitleView_titleText com.example.resources:titleText}</code></td><td> string,color,demension,integer,enum,reference,float,boolean,fraction,flag 
+ 在这里添加可以在xml中按Alt+/出提示 </td></tr>
+           <tr><td><code>{@link #CustomTitleView_titleTextColor com.example.resources:titleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CustomTitleView_titleTextSize com.example.resources:titleTextSize}</code></td><td></td></tr>
+           </table>
+           @see #CustomTitleView_titleText
+           @see #CustomTitleView_titleTextColor
+           @see #CustomTitleView_titleTextSize
+         */
+        public static final int[] CustomTitleView = {
+            0x7f010000, 0x7f010001, 0x7f010002
+        };
+        /**
+          <p>
+          @attr description
+           string,color,demension,integer,enum,reference,float,boolean,fraction,flag 
+ 在这里添加可以在xml中按Alt+/出提示 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name com.example.resources:titleText
+        */
+        public static final int CustomTitleView_titleText = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.resources.R.attr#titleTextColor}
+          attribute's value can be found in the {@link #CustomTitleView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.resources:titleTextColor
+        */
+        public static final int CustomTitleView_titleTextColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.resources.R.attr#titleTextSize}
+          attribute's value can be found in the {@link #CustomTitleView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.resources:titleTextSize
+        */
+        public static final int CustomTitleView_titleTextSize = 2;
+    };
 }

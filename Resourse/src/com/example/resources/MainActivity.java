@@ -6,6 +6,7 @@ import com.example.resources.popupwin.PopupWindowActivity;
 import com.example.resources.view.CustomActivity1;
 import com.example.resources.view.CustomActivity2;
 import com.example.resources.view.CustomActivity3;
+import com.example.resources.view.CustomActivity4;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -46,14 +47,18 @@ public class MainActivity extends Activity {
 		case R.id.btn_drawpic:
 			startActivity(new Intent(this, DrawActivity.class));
 			break;
-		case R.id.btn_customview1:
+			
+		case R.id.btn_customviewgroup1:
 			startActivity(new Intent(this, CustomActivity1.class));
 			break;
-		case R.id.btn_customview2:
+		case R.id.btn_customviewgroup2:
 			startActivity(new Intent(this, CustomActivity2.class));
 			break;
-		case R.id.btn_customview3:
+		case R.id.btn_customviewgroup3:
 			startActivity(new Intent(this, CustomActivity3.class));
+			break;
+		case R.id.btn_customview:
+			startActivity(new Intent(this, CustomActivity4.class));
 			break;
 		default:
 			break;

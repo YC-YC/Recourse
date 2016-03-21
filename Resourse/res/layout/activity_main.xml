@@ -48,26 +48,38 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/btn_customview1"
+            android:id="@+id/btn_customviewgroup1"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:onClick="onClick_Main"
             android:text="自定义ViewGroup(固定)" />
          <Button
-            android:id="@+id/btn_customview2"
+            android:id="@+id/btn_customviewgroup2"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:onClick="onClick_Main"
             android:text="自定义ViewGroup(填充)" />
           <Button
-            android:id="@+id/btn_customview3"
+            android:id="@+id/btn_customviewgroup3"
              android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:onClick="onClick_Main"
             android:text="自定义ViewGroup(父)" />
+    </LinearLayout>
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btn_customview"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="onClick_Main"
+            android:text="自定义View" />
     </LinearLayout>
 
 </LinearLayout>
