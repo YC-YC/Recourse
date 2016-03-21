@@ -49,6 +49,16 @@ public class PopupWindowActivity extends Activity {
 				400,  300, true);
 		
 		popupWindow.setTouchable(true);
+		
+		/**
+		 * dispatchTouchEvent--是否分发Touch事件，
+		 * 		--返回true ，则交给这个view的onTouchEvent处理
+		 * 		--返回 false ，则交给这个 view 的 interceptTouchEvent 方法来决定是否要拦截这个事件
+		 * onInterceptTouchEvent--是否拦截Touch事件
+		 * 		--返回 true ，也就是拦截掉了，则交给它的 onTouchEvent 来处理
+		 * 		--返回 false ，那么就传递给子 view
+		 * onTouchEvent--处理Touch事件
+		 */
 		popupWindow.setTouchInterceptor(new OnTouchListener() {
 			
 			@Override
@@ -61,6 +71,8 @@ public class PopupWindowActivity extends Activity {
 		
 		// 如果不设置PopupWindow的背景，无论是点击外部区域还是Back键都无法dismiss弹框
 		popupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg));
-		popupWindow.showAsDropDown(view);
+//		popupWindow.showAsDropDown(view,0, 0, Gravity.CENTER);
+		popupWindow.showAtLocation(view, Gravity.CENTER, 100, 0);
+				popupWindow.showAsDropDown(view);
 	}
 }
