@@ -47,6 +47,11 @@ public class TextViewWithPic extends View {
 		mContext = context;
 	}
 	
+	/**
+	 * 
+	 * @param text 需要显示的内容，text的每个元素必需在charMap里
+	 * @param charMap 字符集
+	 */
 	public void setText(String text, Map<String, Integer> charMap)
 	{
 		mCharMap = charMap;
