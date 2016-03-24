@@ -101,6 +101,9 @@
          <activity android:name="com.example.resources.view.CustomActivity4" >
         </activity>
 
+         <activity android:name="com.example.customview.CustomTextViewActivity" >
+        </activity>
+         
         <!-- 自定义ContentProvider -->
         <provider
             android:name="com.example.resources.provider.PersonContentProvider"

@@ -1,6 +1,7 @@
 package com.example.resources;
 
 
+import com.example.customview.CustomTextViewActivity;
 import com.example.resources.drawpic.DrawActivity;
 import com.example.resources.popupwin.PopupWindowActivity;
 import com.example.resources.view.CustomActivity1;
@@ -59,6 +60,9 @@ public class MainActivity extends Activity {
 			break;
 		case R.id.btn_customview:
 			startActivity(new Intent(this, CustomActivity4.class));
+			break;
+		case R.id.btn_customtextview:
+			startActivity(new Intent(this, CustomTextViewActivity.class));
 			break;
 		default:
 			break;
