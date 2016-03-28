@@ -25,8 +25,20 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:onClick="round"
+        android:onClick="corner"
         android:text="圆角" />
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:onClick="round"
+        android:text="圆形" />
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:onClick="blur"
+        android:text="高斯模糊" />
     </LinearLayout>
 
     <ImageView
@@ -34,6 +46,6 @@
         android:layout_marginTop="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/dvr" />
+        android:src="@drawable/bg" />
 
 </LinearLayout>

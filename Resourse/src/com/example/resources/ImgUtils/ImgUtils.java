@@ -1,5 +1,7 @@
 package com.example.resources.ImgUtils;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
@@ -14,6 +16,10 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Shader.TileMode;
 import android.graphics.drawable.Drawable;
+import android.renderscript.Allocation;
+import android.renderscript.Element;
+import android.renderscript.RenderScript;
+import android.renderscript.ScriptIntrinsicBlur;
 
 /**
  * @author YC
@@ -68,24 +74,7 @@ public class ImgUtils {
 		
 	}
 	
-	 /**  
-     * 获得圆角图片  
-     * @param bitmap  
-     * @param roundPx  
-     * @return  
-     */  
-   public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, float roundPx) {  
-       Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap  
-               .getHeight(), Config.ARGB_8888);  
-       Canvas canvas = new Canvas(output);  
-       final Paint paint = new Paint();  
-       final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());  
-       final RectF rectF = new RectF(rect);  
-       canvas.drawRoundRect(rectF, roundPx, roundPx, paint);  
-       paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));  
-       canvas.drawBitmap(bitmap, rect, rect, paint);  
-       return output;  
-   }  
+	
    
    /**
     * 获得带倒影的图片
@@ -135,4 +124,97 @@ public class ImgUtils {
                + reflectionGap, paint);  
        return bitmapWithReflection; 
    }
+   
+   /**  
+    * 获得圆角图片  
+    * @param bitmap  
+    * @param roundPx  
+    * @return  
+    */  
+  public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, float roundPx) {  
+      Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap  
+              .getHeight(), Config.ARGB_8888);  
+      Canvas canvas = new Canvas(output);  
+      final Paint paint = new Paint();  
+      final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());  
+      final RectF rectF = new RectF(rect);  
+      canvas.drawRoundRect(rectF, roundPx, roundPx, paint);  
+      paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));  
+      canvas.drawBitmap(bitmap, rect, rect, paint);  
+      return output;  
+  }  
+   
+   /**
+	 * 生成圆形图片
+	 * @param bitmap
+	 * @return
+	 */
+	public static Bitmap getRoundedCornerBitmap(Bitmap bitmap) {
+		int srcW = bitmap.getWidth();
+		int srcH = bitmap.getHeight();
+		if(srcW > srcH){
+			srcW = srcH;
+		}else{
+			srcH = srcW;
+		}
+		Bitmap output = Bitmap.createBitmap(srcW, srcH/*bitmap.getWidth(), bitmap.getHeight()*/, Config.ARGB_8888);
+		Canvas canvas = new Canvas(output);
+
+		final int color = 0xff424242;
+		final Paint paint = new Paint();
+		final Rect rect = new Rect(0, 0, srcW, srcH/*bitmap.getWidth(), bitmap.getHeight()*/);
+		final RectF rectF = new RectF(rect);
+		final float roundPx = bitmap.getWidth() / 2;
+
+		paint.setAntiAlias(true);
+		canvas.drawARGB(0, 0, 0, 0);
+		paint.setColor(color);
+		canvas.drawRoundRect(rectF, roundPx, roundPx, paint);
+
+		paint.setXfermode(new PorterDuffXfermode(Mode.SRC_IN));
+		canvas.drawBitmap(bitmap, rect, rect, paint);
+		return output;
+	}
+	
+	/**
+	 * 高斯模糊
+	 * @param bitmap
+	 * @return
+	 */
+	@SuppressLint("NewApi")
+	public static Bitmap blurBitmap(Context context, Bitmap bitmap){  
+        
+        //Let's create an empty bitmap with the same size of the bitmap we want to blur  
+        Bitmap outBitmap = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Config.ARGB_8888);  
+          
+        //Instantiate a new Renderscript  
+        RenderScript rs = RenderScript.create(context);  
+          
+        //Create an Intrinsic Blur Script using the Renderscript  
+        ScriptIntrinsicBlur blurScript = ScriptIntrinsicBlur.create(rs, Element.U8_4(rs));  
+          
+        //Create the Allocations (in/out) with the Renderscript and the in/out bitmaps  
+        Allocation allIn = Allocation.createFromBitmap(rs, bitmap);  
+        Allocation allOut = Allocation.createFromBitmap(rs, outBitmap);  
+          
+        //Set the radius of the blur  
+        blurScript.setRadius(25.f);  
+          
+        //Perform the Renderscript  
+        blurScript.setInput(allIn);  
+        blurScript.forEach(allOut);  
+          
+        //Copy the final bitmap created by the out Allocation to the outBitmap  
+        allOut.copyTo(outBitmap);  
+          
+        //recycle the original bitmap  
+        bitmap.recycle();  
+          
+        //After finishing everything, we destroy the Renderscript.  
+        rs.destroy();  
+          
+        return outBitmap;  
+          
+          
+    }  
 }
