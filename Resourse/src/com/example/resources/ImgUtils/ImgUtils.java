@@ -215,6 +215,24 @@ public class ImgUtils {
           
         return outBitmap;  
           
-          
-    }  
+    } 
+	
+	public static Bitmap blurBitmapJni(Bitmap sentBitmap, int radius, boolean canReuseInBitmap)
+	{
+		 Bitmap bitmap;
+	        if (canReuseInBitmap) {
+	            bitmap = sentBitmap;
+	        } else {
+	            bitmap = sentBitmap.copy(sentBitmap.getConfig(), true);
+	        }
+	        if (radius < 1) {
+	            return (null);
+	        }
+	        //Jni BitMap
+	        ImageBlur.blurBitMap(bitmap, radius);
+
+	        return (bitmap);
+		
+		
+	}
 }

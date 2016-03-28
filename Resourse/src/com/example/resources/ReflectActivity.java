@@ -55,6 +55,7 @@ public class ReflectActivity extends Activity {
 		Bitmap bitmap = ((BitmapDrawable)mImgDvr.getDrawable()).getBitmap();
 		LogUtil.startTime("高斯模糊");
 		mImgDvr.setImageBitmap(ImgUtils.blurBitmap(this, bitmap));
+//		mImgDvr.setImageBitmap(ImgUtils.blurBitmapJni(bitmap, 10, true));
 		LogUtil.endUseTime("高斯模糊");
 		mImgDvr.setOnTouchListener(new OnTouchListener() {
 			
