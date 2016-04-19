@@ -64,6 +64,9 @@ public class MainActivity extends Activity {
 		case R.id.btn_customtextview:
 			startActivity(new Intent(this, CustomTextViewActivity.class));
 			break;
+		case R.id.btn_expandlistview:
+			startActivity(new Intent(this, ExpandListActivity.class));
+			break;
 		default:
 			break;
 		}

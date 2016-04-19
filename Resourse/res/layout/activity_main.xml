@@ -88,5 +88,17 @@
             android:onClick="onClick_Main"
             android:text="自定义TextView" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btn_expandlistview"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="onClick_Main"
+            android:text="伸展ListView" />
+    </LinearLayout>
 
 </LinearLayout>
