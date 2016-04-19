@@ -14,7 +14,9 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * @author YC
@@ -34,7 +36,15 @@ public class ExpandListActivity extends Activity  {
 		mExpandableListView = (ExpandableListView) findViewById(R.id.expandedlist);
 		mExpandableListView.setAdapter(new MyBaseExpandableListAdapter());
 		mExpandableListView.setCacheColorHint(0);
-		
+		mExpandableListView.setOnChildClickListener(new OnChildClickListener() {
+			
+			@Override
+			public boolean onChildClick(ExpandableListView parent, View v,
+					int groupPosition, int childPosition, long id) {
+				Toast.makeText(ExpandListActivity.this, "点击了第" + groupPosition + "组，第" + childPosition + "项", 100).show();
+				return false;
+			}
+		});
 	}
 	
 	
@@ -102,6 +112,11 @@ public class ExpandListActivity extends Activity  {
 		public View getGroupView(int groupPosition, boolean isExpanded,
 				View convertView, ViewGroup parent) {
 			String string = group.get(groupPosition);
+			/*ImageView mgroupimage=(ImageView)convertView.findViewById(R.id.mGroupimage);
+	           mgroupimage.setImageBitmap(mla);
+	           if(!isExpanded){
+	                  mgroupimage.setImageBitmap(mshou);//或者imageView.setImageResource(R.drawable.mm_submenu_down);
+	            }*/
 			return getGenericView(string);
 		}
 
