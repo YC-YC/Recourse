@@ -4,6 +4,7 @@ package com.example.resources;
 import com.example.customview.CustomTextViewActivity;
 import com.example.resources.drawpic.DrawActivity;
 import com.example.resources.popupwin.PopupWindowActivity;
+import com.example.resources.utils.Utils;
 import com.example.resources.view.CustomActivity1;
 import com.example.resources.view.CustomActivity2;
 import com.example.resources.view.CustomActivity3;
@@ -27,6 +28,12 @@ public class MainActivity extends Activity {
 		startActivity(intent);
 	}
 
+	public void onClick_test(View view){
+//		Utils.runRuntimeFun();
+//		Utils.shuffle();
+		Utils.ReadPlugIn(this, this.getClass().getClassLoader());
+	}
+	
 	public void onClick_Animtation(View view) {
 		Intent intent = new Intent(this, AnimationActivity.class);
 		startActivity(intent);

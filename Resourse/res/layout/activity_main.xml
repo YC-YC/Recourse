@@ -2,13 +2,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     android:orientation="vertical" >
 
-    <Button
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick_Drawable"
-        android:text="资源配置" />
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick_Drawable"
+            android:text="资源配置" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick_test"
+            android:text="测试" />
+    </LinearLayout>
 
     <Button
         android:layout_width="fill_parent"
@@ -50,44 +64,49 @@
         <Button
             android:id="@+id/btn_customviewgroup1"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onClick_Main"
             android:text="自定义ViewGroup(固定)" />
-         <Button
+
+        <Button
             android:id="@+id/btn_customviewgroup2"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onClick_Main"
             android:text="自定义ViewGroup(填充)" />
-          <Button
+
+        <Button
             android:id="@+id/btn_customviewgroup3"
-             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onClick_Main"
             android:text="自定义ViewGroup(父)" />
     </LinearLayout>
-     <LinearLayout
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/btn_customview"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onClick_Main"
             android:text="自定义View" />
+
         <Button
             android:id="@+id/btn_customtextview"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onClick_Main"
             android:text="自定义TextView" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
@@ -95,8 +114,8 @@
         <Button
             android:id="@+id/btn_expandlistview"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="onClick_Main"
             android:text="伸展ListView" />
     </LinearLayout>

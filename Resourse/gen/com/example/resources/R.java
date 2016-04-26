@@ -64,48 +64,49 @@ containing a value of this type.
         public static final int android2=0x7f020001;
         public static final int background=0x7f020002;
         public static final int bg=0x7f020003;
-        public static final int button=0x7f020004;
-        public static final int clip=0x7f020005;
-        public static final int cross_fade=0x7f020006;
-        public static final int degree=0x7f020007;
-        public static final int dvr=0x7f020008;
-        public static final int expand_selector=0x7f020009;
-        public static final int focused=0x7f02000a;
-        public static final int ic_launcher=0x7f02000b;
-        public static final int inset=0x7f02000c;
-        public static final int lamp=0x7f02000d;
-        public static final int lamp_off=0x7f02000e;
-        public static final int lamp_on=0x7f02000f;
-        public static final int layer=0x7f020010;
-        public static final int loading=0x7f020011;
-        public static final int normal=0x7f020012;
-        public static final int num0=0x7f020013;
-        public static final int num1=0x7f020014;
-        public static final int num2=0x7f020015;
-        public static final int num3=0x7f020016;
-        public static final int num4=0x7f020017;
-        public static final int num5=0x7f020018;
-        public static final int num6=0x7f020019;
-        public static final int num7=0x7f02001a;
-        public static final int num8=0x7f02001b;
-        public static final int num9=0x7f02001c;
-        public static final int pic_1=0x7f02001d;
-        public static final int pic_10=0x7f02001e;
-        public static final int pic_11=0x7f02001f;
-        public static final int pic_12=0x7f020020;
-        public static final int pic_2=0x7f020021;
-        public static final int pic_3=0x7f020022;
-        public static final int pic_4=0x7f020023;
-        public static final int pic_5=0x7f020024;
-        public static final int pic_6=0x7f020025;
-        public static final int pic_7=0x7f020026;
-        public static final int pic_8=0x7f020027;
-        public static final int pic_9=0x7f020028;
-        public static final int pressed=0x7f020029;
-        public static final int progress=0x7f02002a;
-        public static final int shape=0x7f02002b;
-        public static final int tree_ec=0x7f02002c;
-        public static final int tree_ex=0x7f02002d;
+        public static final int bg_theme=0x7f020004;
+        public static final int button=0x7f020005;
+        public static final int clip=0x7f020006;
+        public static final int cross_fade=0x7f020007;
+        public static final int degree=0x7f020008;
+        public static final int dvr=0x7f020009;
+        public static final int expand_selector=0x7f02000a;
+        public static final int focused=0x7f02000b;
+        public static final int ic_launcher=0x7f02000c;
+        public static final int inset=0x7f02000d;
+        public static final int lamp=0x7f02000e;
+        public static final int lamp_off=0x7f02000f;
+        public static final int lamp_on=0x7f020010;
+        public static final int layer=0x7f020011;
+        public static final int loading=0x7f020012;
+        public static final int normal=0x7f020013;
+        public static final int num0=0x7f020014;
+        public static final int num1=0x7f020015;
+        public static final int num2=0x7f020016;
+        public static final int num3=0x7f020017;
+        public static final int num4=0x7f020018;
+        public static final int num5=0x7f020019;
+        public static final int num6=0x7f02001a;
+        public static final int num7=0x7f02001b;
+        public static final int num8=0x7f02001c;
+        public static final int num9=0x7f02001d;
+        public static final int pic_1=0x7f02001e;
+        public static final int pic_10=0x7f02001f;
+        public static final int pic_11=0x7f020020;
+        public static final int pic_12=0x7f020021;
+        public static final int pic_2=0x7f020022;
+        public static final int pic_3=0x7f020023;
+        public static final int pic_4=0x7f020024;
+        public static final int pic_5=0x7f020025;
+        public static final int pic_6=0x7f020026;
+        public static final int pic_7=0x7f020027;
+        public static final int pic_8=0x7f020028;
+        public static final int pic_9=0x7f020029;
+        public static final int pressed=0x7f02002a;
+        public static final int progress=0x7f02002b;
+        public static final int shape=0x7f02002c;
+        public static final int tree_ec=0x7f02002d;
+        public static final int tree_ex=0x7f02002e;
     }
     public static final class id {
         public static final int action_settings=0x7f09001f;
@@ -205,6 +206,9 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        /**  style name以及它所继承的系统Theme主题 
+         */
+        public static final int Theme_MainActivity=0x7f070004;
         /**  自定义界面切换动画 
          */
         public static final int ThemeActivity=0x7f070002;
