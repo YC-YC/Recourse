@@ -119,5 +119,31 @@
             android:onClick="onClick_Main"
             android:text="伸展ListView" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btn_askpermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick_Main"
+            android:text="获取权限" />
+        <Button
+            android:id="@+id/btn_stoppermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick_Main"
+            android:text="删除权限" />
+        <Button
+            android:id="@+id/btn_lockscreen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick_Main"
+            android:text="锁屏" />
+    </LinearLayout>
 
 </LinearLayout>

@@ -1,26 +1,39 @@
 package com.example.resources;
 
 
+import android.app.Activity;
+import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+
 import com.example.customview.CustomTextViewActivity;
 import com.example.resources.drawpic.DrawActivity;
 import com.example.resources.popupwin.PopupWindowActivity;
+import com.example.resources.receiver.AdminReceiver;
 import com.example.resources.utils.Utils;
 import com.example.resources.view.CustomActivity1;
 import com.example.resources.view.CustomActivity2;
 import com.example.resources.view.CustomActivity3;
 import com.example.resources.view.CustomActivity4;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-
 public class MainActivity extends Activity {
 
+	private static final String TAG = "MainActivity";
+
+	private DevicePolicyManager dpm;
+	private ComponentName componentName;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		dpm = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
+		componentName = new ComponentName(this, AdminReceiver.class);
 	}
 
 	public void onClick_Drawable(View view) {
@@ -31,7 +44,32 @@ public class MainActivity extends Activity {
 	public void onClick_test(View view){
 //		Utils.runRuntimeFun();
 //		Utils.shuffle();
-		Utils.ReadPlugIn(this, this.getClass().getClassLoader());
+//		Utils.ReadPlugIn(this, this.getClass().getClassLoader());
+//		Utils.getVideoAtFrame("mnt/USB/video/20150101_051237B.mp4", "mnt/sdcard/shoot/20150101_051237B.png", 20*1000);
+//		new Button().performClick();
+		/*new View(this).post(new Runnable() {
+			@Override
+			public void run() {
+				new Button(MainActivity.this).performClick();
+			}
+		});*/
+		
+//		AudioManager aa = (AudioManager) getSystemService(Service.AUDIO_SERVICE);
+//		aa.playSoundEffect(SoundEffectConstants.CLICK);
+		
+		int processors = Runtime.getRuntime().availableProcessors();//为2
+		Log.i(TAG, "avaliable processor = " + processors);
+		
+		Utils.testThreadPool();
+	}
+	
+	
+
+
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		return super.onKeyDown(keyCode, event);
 	}
 	
 	public void onClick_Animtation(View view) {
@@ -74,8 +112,52 @@ public class MainActivity extends Activity {
 		case R.id.btn_expandlistview:
 			startActivity(new Intent(this, ExpandListActivity.class));
 			break;
+		case R.id.btn_askpermission:
+			startDeviceManager();
+			break;
+		case R.id.btn_stoppermission:
+			stopDeviceManager();
+			break;
+		case R.id.btn_lockscreen:
+			sysLock();
+			break;
 		default:
 			break;
 		}
 	}
+
+	
+	
+	/**
+	 * 锁屏
+	 */
+	private void sysLock() {
+		if (dpm.isAdminActive(componentName)){
+			dpm.lockNow();
+		}
+	}
+
+	/**
+	 * 关闭权限
+	 */
+	private void stopDeviceManager() {
+		if (dpm.isAdminActive(componentName)){
+			dpm.removeActiveAdmin(componentName);
+		}
+	}
+
+	/**
+	 * 获取权限
+	 */
+	private void startDeviceManager() {
+		Intent it = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
+		
+		//需要用到哪些权限，
+		it.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, componentName);
+		//附加的说明
+		it.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "YC获取权限");
+		startActivityForResult(it, 0);
+	}
+	
+	
 }
