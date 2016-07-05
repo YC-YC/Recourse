@@ -13,6 +13,7 @@
     <!-- wifi -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
         android:allowBackup="true"
@@ -107,6 +108,9 @@
         </activity>
         
          <activity android:name="com.example.resources.ExpandListActivity" >
+        </activity>
+        
+          <activity android:name="com.example.draghelper.ViewDragHelperActivity" >
         </activity>
         <!-- 自定义ContentProvider -->
         <provider

@@ -3,17 +3,26 @@ package com.example.resources;
 
 import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
+import android.content.ClipData;
+import android.content.ClipDescription;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.DragEvent;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.DragShadowBuilder;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 
 import com.example.customview.CustomTextViewActivity;
+import com.example.draghelper.ViewDragHelperActivity;
 import com.example.resources.drawpic.DrawActivity;
 import com.example.resources.popupwin.PopupWindowActivity;
+import com.example.resources.popupwin.WindowUtils;
 import com.example.resources.receiver.AdminReceiver;
 import com.example.resources.utils.Utils;
 import com.example.resources.view.CustomActivity1;
@@ -28,12 +37,16 @@ public class MainActivity extends Activity {
 	private DevicePolicyManager dpm;
 	private ComponentName componentName;
 	
+	private Button mBtnTest;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		dpm = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
 		componentName = new ComponentName(this, AdminReceiver.class);
+		mBtnTest = (Button) findViewById(R.id.btntest);
+		
 	}
 
 	public void onClick_Drawable(View view) {
@@ -61,6 +74,10 @@ public class MainActivity extends Activity {
 		Log.i(TAG, "avaliable processor = " + processors);
 		
 		Utils.testThreadPool();
+		
+		Intent it = new Intent("com.zhonghong.ACTION_AMIRRA");
+		it.putExtra("quit", "true");
+		sendBroadcast(it);
 	}
 	
 	
@@ -121,6 +138,12 @@ public class MainActivity extends Activity {
 		case R.id.btn_lockscreen:
 			sysLock();
 			break;
+		case R.id.btn_windowmanager:
+			testWindowManager();
+			break;
+		case R.id.btn_viewdraghelper:
+			startActivity(new Intent(this, ViewDragHelperActivity.class));
+			break;
 		default:
 			break;
 		}
@@ -128,6 +151,13 @@ public class MainActivity extends Activity {
 
 	
 	
+	/**
+	 * 
+	 */
+	private void testWindowManager() {
+		WindowUtils.getInstanse(this).showPopupWindow();
+	}
+
 	/**
 	 * 锁屏
 	 */

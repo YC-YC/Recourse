@@ -17,6 +17,7 @@
             android:text="资源配置" />
 
         <Button
+            android:id="@+id/btntest"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -43,13 +44,44 @@
         android:onClick="onClick_Main"
         android:text="ContentProvider" />
 
-    <Button
-        android:id="@+id/btn_popupwind"
+    
+    
+     <LinearLayout
         android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+        android:id="@+id/btn_popupwind"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+          android:layout_weight="1"
         android:onClick="onClick_Main"
         android:text="PopupWindow测试" />
+        
+        <Button
+        android:id="@+id/btn_windowmanager"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+          android:layout_weight="1"
+        android:onClick="onClick_Main"
+        android:text="WindowManager测试" />
 
+    </LinearLayout>
+
+      <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+        android:id="@+id/btn_viewdraghelper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="onClick_Main"
+        android:text="ViewDragHelper测试" />
+
+    </LinearLayout>
+     
     <Button
         android:id="@+id/btn_drawpic"
         android:layout_width="fill_parent"
