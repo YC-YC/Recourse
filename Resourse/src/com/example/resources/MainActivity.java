@@ -3,20 +3,14 @@ package com.example.resources;
 
 import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
-import android.content.ClipData;
-import android.content.ClipDescription;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.DragEvent;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.DragShadowBuilder;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 
 import com.example.customview.CustomTextViewActivity;
 import com.example.draghelper.ViewDragHelperActivity;
@@ -24,6 +18,7 @@ import com.example.resources.drawpic.DrawActivity;
 import com.example.resources.popupwin.PopupWindowActivity;
 import com.example.resources.popupwin.WindowUtils;
 import com.example.resources.receiver.AdminReceiver;
+import com.example.resources.scroller.ScrollActivity;
 import com.example.resources.utils.Utils;
 import com.example.resources.view.CustomActivity1;
 import com.example.resources.view.CustomActivity2;
@@ -143,6 +138,9 @@ public class MainActivity extends Activity {
 			break;
 		case R.id.btn_viewdraghelper:
 			startActivity(new Intent(this, ViewDragHelperActivity.class));
+			break;
+		case R.id.btn_testscroller:
+			startActivity(new Intent(this, ScrollActivity.class));
 			break;
 		default:
 			break;

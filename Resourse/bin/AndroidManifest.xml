@@ -112,6 +112,8 @@
         
           <activity android:name="com.example.draghelper.ViewDragHelperActivity" >
         </activity>
+         <activity android:name="com.example.resources.scroller.ScrollActivity" >
+        </activity>
         <!-- 自定义ContentProvider -->
         <provider
             android:name="com.example.resources.provider.PersonContentProvider"
