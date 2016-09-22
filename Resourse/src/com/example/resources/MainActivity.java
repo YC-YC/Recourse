@@ -19,6 +19,7 @@ import com.example.resources.popupwin.PopupWindowActivity;
 import com.example.resources.popupwin.WindowUtils;
 import com.example.resources.receiver.AdminReceiver;
 import com.example.resources.scroller.ScrollActivity;
+import com.example.resources.text.TextViewLinkActivity;
 import com.example.resources.utils.Utils;
 import com.example.resources.view.CustomActivity1;
 import com.example.resources.view.CustomActivity2;
@@ -147,6 +148,16 @@ public class MainActivity extends Activity {
 		}
 	}
 
+	public void onClickTextView(View view){
+		switch (view.getId()) {
+		case R.id.Testspannablestring:
+			startActivity(new Intent(this, TextViewLinkActivity.class));
+			break;
+
+		default:
+			break;
+		}
+	}
 	
 	
 	/**
